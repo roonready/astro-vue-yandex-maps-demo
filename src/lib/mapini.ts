@@ -3,6 +3,6 @@ import { createYmaps } from 'vue-yandex-maps';
 
 export default (app: App) => {
     app.use(createYmaps({
-        apikey: 'c7c43446-ec7e-4158-b203-8b68c766b975',
+        apikey: '9fa90fbc-ce5f-4dc9-ae6d-433e0ec7338b',
       }));
 };
