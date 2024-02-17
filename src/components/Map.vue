@@ -1,5 +1,6 @@
 <template>
-  <div>inside vue</div>
+  <div><a href="https://github.com/yandex-maps-unofficial/vue-yandex-maps">vue-yandex-maps</a> demo
+</div>
   <yandex-map
     :settings="{
       location: {
