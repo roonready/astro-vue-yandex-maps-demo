@@ -6,7 +6,7 @@ main:
   stage: build
   only:
     refs:
-      - main
+      - master
   script:
     - corepack enable
     - corepack prepare pnpm@latest --activate
