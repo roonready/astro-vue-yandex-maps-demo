@@ -1,0 +1,19 @@
+main:
+  image: node:18.16.0
+  cache:
+    paths:
+      - node_modules/
+  stage: build
+  only:
+    refs:
+      - main
+  script:
+    - cd astro
+    - corepack enable
+    - corepack prepare pnpm@latest --activate
+    - pnpm install
+    - unzip -qq awscliv2.zip
+    - ./aws/install
+    - pnpm build
+    - - aws --endpoint-url=https://storage.yandexcloud.net  s3 sync dist/ s3://yamap3  --cache-control max-age=100
+
