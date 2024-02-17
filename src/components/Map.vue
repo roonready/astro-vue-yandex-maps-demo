@@ -1,4 +1,5 @@
 <template>
+  <div>inside vue</div>
   <yandex-map
     :settings="{
       location: {
